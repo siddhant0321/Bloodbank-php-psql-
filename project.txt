@@ -1,0 +1,32 @@
+
+
+
+//finalproject
+finalproject=# create table donor(did SERIAL primary key,name varchar(30),email text UNIQUE,phone text,password text ,cpassword text);
+CREATE TABLE
+finalproject=# insert into donor values('1','Shripad Deshmukh','shripad@gmail.com','9768456745','Shripad@56','Shripad@56');
+INSERT 0 1
+finalproject=# select * from donor;
+ did |       name       |       email       |   phone    |  password  | cpassword  
+-----+------------------+-------------------+------------+------------+------------
+   1 | Shripad Deshmukh | shripad@gmail.com | 9768456745 | Shripad@56 | Shripad@56
+(1 row)
+
+
+finalproject=# create table login(lid SERIAL primary key,emalid text,password text);
+CREATE TABLE
+finalproject=# insert into login values(1,'shripad@gmail.com','Shripad@56');
+INSERT 0 1
+finalproject=# 
+ create table personalinfo(pid SERIAL primary key,bgroup varchar(5) check(bgroup in('O+','O-','A+','A-','B+','B-','AB+','AB-')),gender varchar(9) check(gender in('Male','Female','Other')), AYEP varchar(9) check(AYEP in('yes','no')),medic varchar(9) check(medic in('yes','no')),address text);
+
+insert into personalinfo values(1,'O+','Male','yes','no','pune');
+
+
+
+
+finalproject=# create table booking(bid SERIAL primary key,name varchar(30),place varchar(30) check(place in('p1','p2','p3','p4','p5')),date text,time text check(time in('t1','t2','t3','t4','t5','t6')));
+CREATE TABLE
+finalproject=# insert into booking values('1','Dinesh Deshpande','2021-06-17','p1','t3');
+INSERT 0 1
+
